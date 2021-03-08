@@ -1,11 +1,9 @@
-
-# Syntax highlighting
-markdown:            redcarpet
-highlighter:         pygments
-
-# Permalinks
-permalink:           /:title
-relative_permalinks: true
+# "/" + 仓库的名字. 资源文件的路径组成部分
+baseurl:             '/create-black-and-white-story-template'
+baseurl_posts_img:   '/create-black-and-white-story-template/assets/images/posts/'
+baseurl_featured_img: '/create-black-and-white-story-template/assets/images/hero/'
+baseurl_featured_thumbnail: '/create-black-and-white-story-template/assets/images/thumbnail/'
+baseurl_javascripts: '/create-black-and-white-story-template/assets/javascripts/'
 
 # Setup
 timezone:            your timezone # eg. Asia/Kathmandu
@@ -16,11 +14,6 @@ tagline:             'tagline'
 description:         'description'
 url:                 site url
 rss:                 rss feed url
-baseurl:             '/create-black-and-white-story-template'
-baseurl_posts_img:   '/create-black-and-white-story-template/assets/images/posts/'
-baseurl_featured_img: '/create-black-and-white-story-template/assets/images/hero/'
-baseurl_featured_thumbnail: '/create-black-and-white-story-template/assets/images/thumbnail/'
-baseurl_javascripts: '/create-black-and-white-story-template/assets/javascripts/'
 icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
@@ -42,3 +35,16 @@ defaults:
       type: "posts"
     values:
       layout: "default"
+
+# 其它配置, 可忽略, 无需修改
+# Permalinks
+permalink: /:title/
+
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
